@@ -9,3 +9,7 @@ To install:
 4. On the chrome extension page click the button on the upper left that says load unpacked and upload the unzipped zip file from above
 
 To use the extension, just highlight text on a webpage and click the cloud icon to get your search results. You'll have to authenticate to Salesforce the first time, but after this authentication it should just work as you select text and click the icon. 
+
+<p align="center">
+ <img src="https://github.com/erikrichardlarson/salesforce_prospector/blob/main/images/Screen%20Shot%202021-02-24%20at%201.40.41%20PM.png" />
+</p>
