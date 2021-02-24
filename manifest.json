@@ -1,0 +1,43 @@
+{
+  "name": "Salesforce Prospector",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwnVzsyWLpmNZlRvDcztb7OQFqflqykJWdK0DHMUYO4oAyuNpnhUUB2Nd8Xhfx5dkCQP2cvUoTE1zTUypmtiwhEFvJiVV7wiJC+iIu5fdFz6lfLZQ4ujRcV4kR8lB/zmXdZhnJkwtjHvOVqb1VI583GgD5OHAYZTsZXlIjOtB/3yei9T1iB7Lv27PN3oXTNC9m5k81g6d4mUquqK/9z8C2MbgHSG49Q3ysMyvaNpvTmbSDwEeRnwgAyIQrgWvn4FQwXpNMWKgFpk9Ix9bbu1yqNT4kQXXv46UfX38mC9G4jJTi9zdu5DifhgdOpnfmOodtqtEh+akt5QmxcfCWSBUoQIDAQAB",
+  "description": "Find entities in Salesforce",
+  "homepage_url": "https://login.salesforce.com",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons":
+  {
+    "16": "images/16.png",
+    "32": "images/16.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/16.png",
+      "32": "images/16.png"
+    },
+    "default_title": "Salesforce Prospector",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content_script.js"
+            ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "identity",
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*"
+  ]
+}
